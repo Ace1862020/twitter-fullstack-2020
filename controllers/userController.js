@@ -5,7 +5,6 @@ const fs = require('fs');
 //const IMGUR_CLIENT_ID = process.env.IMGUR_CLIENT_ID
 const helpers = require('../_helpers');
 const db = require('../models');
-const user = require('../models/user');
 const User = db.User;
 const Tweet = db.Tweet;
 const Reply = db.Reply;

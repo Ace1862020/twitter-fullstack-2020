@@ -6,6 +6,7 @@ const userController = require('../controllers/userController');
 const adminController = require('../controllers/adminController');
 const tweetController = require('../controllers/tweetController');
 const replyController = require('../controllers/replyController');
+const chatController = require('../controllers/chatController')
 const multer = require('multer');
 const upload = multer({
   dest: 'temp/',
@@ -185,6 +186,9 @@ router.delete(
   blockAdmin,
   userController.removeFollowing
 );
+
+// message
+router.get('/message', authenticated, blockAdmin, chatController.getPublicChar)
 
 // 登出
 router.get('/logout', userController.logOut);

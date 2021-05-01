@@ -251,3 +251,17 @@
   border-radius: 100px;
   position: absolute;
 }
+/*chat-bar*/
+.chart-sidebar-line {
+  height: 100vh;
+  border-right: 1px solid #e6ecf0;
+}
+.chart-sidebar-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.badge-item{
+  background-color: orangered;
+  color: #ffffff;
+}

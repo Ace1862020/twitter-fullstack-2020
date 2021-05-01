@@ -52,6 +52,18 @@
                         </a>
                     </div>
                     <div class="nav_item col-auto">
+                        <a href="/message">
+                            <i class="bi bi-chat"></i>
+                            <span class="item">聊天</span>
+                        </a>
+                    </div>
+                    <div class="nav_item col-auto">
+                        <a href="/message">
+                            <i class="bi bi-chat-dots"></i>
+                            <span class="item">私訊</span>
+                        </a>
+                    </div>
+                    <div class="nav_item col-auto">
                         <a href="/users/{{user.id}}/setting">
                             <i class="bi bi-gear"></i>
                             <span class="item">設定</span>
@@ -182,7 +194,8 @@
             </div>
         </div>
     </div>
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/chat.js"></script>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

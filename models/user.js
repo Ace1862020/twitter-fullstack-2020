@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     avatar: DataTypes.STRING,
     introduction: DataTypes.STRING,
     cover: DataTypes.STRING,
-    role: DataTypes.STRING         
+    role: DataTypes.STRING
   }, {});
   User.associate = function (models) {
     User.hasMany(models.Tweet)
@@ -24,12 +24,13 @@ module.exports = (sequelize, DataTypes) => {
       through: models.Followship,
       foreignKey: 'followingId',
       as: 'Followers'
-    })
+    });
     User.belongsToMany(User, {
       through: models.Followship,
       foreignKey: 'followerId',
       as: 'Followings'
-    })
+    });
+    User.hasMany(models.PublicChat)
   };
   return User;
 };
